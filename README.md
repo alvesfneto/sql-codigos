@@ -6,9 +6,11 @@ Para acesso a estas tabelas tem que ter permissionamento.<br>
 A sequencia para atualização diaria das bases deve seguir os passos seguintes:<br>
 1 - Baixa_tabelas_base_dia_anterior;<br>
 2 - EXEC PROCEDURES<br>
+<blockquote>
     Procedure-gera-alunos-diario;<br>
     Procedure-gera-classes-diario;<br>
     Procedure-gera-escolas-diario<br>
+ </blockquote>
 ------------------------------------------------------------<br>
 Disponibilizo também neste diretório as queries para atendimento das solicitações dos diversos setores/departamentos de SME.<br>
 Todas as solicitações são baseadas nas tabelas base diárias.<br>
