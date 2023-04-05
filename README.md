@@ -9,7 +9,7 @@ A sequencia para atualização diaria das bases deve seguir os passos seguintes:
 2 - EXEC PROCEDURES<br>
 <blockquote>
 <h4>
-EXEC PROC GERA_ALUNOS_DIARIO, <br>
+EXEC GERA_ALUNOS_DIARIO, <br>
 EXEC GERA_CLASSES_DIARIO, <br>
 EXEC GERA_ESCOLAS_DIARIO<br></h4>
 </blockquote>
