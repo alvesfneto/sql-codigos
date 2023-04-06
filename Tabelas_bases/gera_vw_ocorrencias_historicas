@@ -1,0 +1,36 @@
+USE [Db_Local_0]
+GO
+
+/****** Object:  View [dbo].[VW_OCORRENCIAS_HISTÓRICAS]    Script Date: 12/07/2022 13:15:50 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE VIEW [dbo].[VW_OCORRENCIAS_HISTÓRICAS] AS
+SELECT TOP 150000
+	E.DRE,
+	 A.cd_unidade_educacao AS CODEOL,
+	 C.SG_TP_ESCOLA AS TIPO,
+	 D.nm_unidade_educacao AS [NOME ESCOLA],
+	 A.tp_ocorrencia_historica,
+	 CD_ATO,
+	 G.dc_tipo_ocorrencia_historica,
+	 DC_ATO AS OCORRÊNCIA,
+	 a.dt_inicio_ocorrencia_unidade as DT_DOC,
+	 A.dt_publicacao_dom AS DT_ATO,
+	 A.dt_atualizacao_tabela AS DT_REGISTRO,
+	 A.CD_OPERADOR AS OPERADOR,
+	 F.[sg_tipo_situacao_unidade] AS SITUAÇAO_UNIDADE,
+	 A.CRDATE AS [DATA BASE]
+ 
+	FROM D_HISTORICO_UNIDADE A
+	LEFT JOIN D_ESCOLA B ON A.cd_unidade_educacao=B.CD_ESCOLA
+	JOIN D_TIPO_ESCOLA C ON B.tp_escola=C.tp_escola
+	LEFT JOIN D_UNIDADE_EDUCACAO D ON A.cd_unidade_educacao=D.cd_unidade_educacao
+	JOIN tbl_dre E ON D.cd_unidade_administrativa_referencia = E.CODLOC COLLATE SQL_Latin1_General_CP1_CI_AI
+	JOIN tipo_situacao_unidade F ON D.tp_situacao_unidade = F.tp_situacao_unidade
+	JOIN tipo_ocorrencia_historica G ON A.tp_ocorrencia_historica=G.tp_ocorrencia_historica
+	
+	ORDER BY 11 DESC 
