@@ -1,0 +1,20 @@
+--AMBIENTES COMPARTILHADOS ENTRE ESCOLAS DA RME
+
+SELECT DISTINCT 
+C.DRE,
+A.CD_ESCOLA,
+C.SG_TP_ESCOLA AS TIPO,
+C.NOMESC,
+B.dc_tipo_ambiente AS AMBIENTE,
+D.DRE,
+cd_unidade_educacao_compartilhada AS UNID_COMP,
+D.SG_TP_ESCOLA AS TIPO_COMP,
+D.NOMESC AS MOMESC_COMP,
+in_utilizacao_sala_aula,
+CONVERT(VARCHAR,A.CRDATE-1, 103) AS DT_BASE
+FROM D_AMBIENTE_ESCOLA A
+JOIN tipo_ambiente B ON A.tp_ambiente=B.tp_ambiente
+JOIN SME_ESCOLA_DIARIO C ON A.cd_escola=C.CD_ESCOLA
+JOIN SME_ESCOLA_DIARIO D ON A.cd_unidade_educacao_compartilhada=D.CD_ESCOLA
+WHERE cd_unidade_educacao_compartilhada IS NOT NULL AND A.dt_fim IS NULL AND C.CD_SIT=1
+ORDER BY 1
