@@ -1,5 +1,5 @@
 
---CÓDIGO QUE CRIA SEQUENCIA NUMÉRICA ATÉ 888888
+--CÓDIGO QUE CRIA SEQUENCIA NUMÉRICA DE OOOOOO ATÉ 888888(último código criado para testes de PRODAM)
 WITH gerador (id) AS (
         SELECT 000000
         UNION ALL
@@ -33,30 +33,32 @@ A.tp_unidade_administrativa,
 dc_tipo_unidade_administrativa,sg_unidade_administrativa,
 cd_unidade_administrativa,
 COD
+
 FROM D_UNIDADE_ADMINISTRATIVA A
 JOIN D_TIPO_UNIDADE_ADMINISTRATIVA B ON A.tp_unidade_administrativa=B.tp_unidade_administrativa
+
 right JOIN base_sequencia C ON A.cd_unidade_administrativa=C.COD collate SQL_Latin1_General_CP1_CI_AI
 --SELECT * FROM ##compara_codigos
 
-----------------------------------------------------------------
-
-/**/  SELECT * FROM ##compara_codigos WHERE COD LIKE '00%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC --UNIDADES DIRETAS
-/**/  --SELECT * FROM ##compara_codigos WHERE COD LIKE '01%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC --UNIDADES DIRETAS
-/**/  --SELECT * FROM ##compara_codigos WHERE COD LIKE '02%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC --UNIDADES DIRETAS
-/**/  SELECT * FROM ##compara_codigos WHERE COD LIKE '03%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC --UNIDADES DIRETAS
-/**/  --SELECT * FROM ##compara_codigos WHERE COD LIKE '04%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC --UNIDADES DIRETAS
-/**/  --SELECT * FROM ##compara_codigos WHERE COD LIKE '05%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC --UNIDADES DIRETAS
-/**/  --SELECT * FROM ##compara_codigos WHERE COD LIKE '06%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC --UNIDADES DIRETAS
-/**/  --SELECT * FROM ##compara_codigos WHERE COD LIKE '07%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC --UNIDADES DIRETAS
-/**/  SELECT * FROM ##compara_codigos WHERE COD LIKE '08%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC --UNIDADES DIRETAS
-/**/  SELECT * FROM ##compara_codigos WHERE COD LIKE '09%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC --UNIDADES DIRETAS
-
-/**/  SELECT * FROM ##compara_codigos WHERE COD LIKE '1%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC --OUTROS, FORA PMSP, ...
-/**/  SELECT * FROM ##compara_codigos WHERE COD LIKE '2%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC  --CCAS, CEUS, ESCOLAS TECNICAS,CIEJA
-/**/  SELECT * FROM ##compara_codigos WHERE COD LIKE '3%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC --CRECHES E ESOLAS PARTICULARES
-/**/  SELECT * FROM ##compara_codigos WHERE COD LIKE '4%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC  --CRECHES INDIRETAS
-/**/  SELECT * FROM ##compara_codigos WHERE COD LIKE '5%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC   --MOVA
-/**/  SELECT * FROM ##compara_codigos WHERE COD LIKE '6%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC  --ESP CONVENIOS 
-/**/  SELECT * FROM ##compara_codigos WHERE COD LIKE '7%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC  --CEU ATCOMPL
-/**/  SELECT * FROM ##compara_codigos WHERE COD LIKE '8%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC 
-/**/  --SELECT * FROM ##compara_codigos WHERE COD LIKE '9%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC 
+/**************************************************************************************************************************************************/
+/**/  SELECT * FROM ##compara_codigos WHERE COD LIKE '00%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC --UNIDADES DIRETAS                       /**/
+/**/  SELECT * FROM ##compara_codigos WHERE COD LIKE '01%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC --UNIDADES DIRETAS			/**/
+/**/  --SELECT * FROM ##compara_codigos WHERE COD LIKE '02%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC --UNIDADES DIRETAS			/**/
+/**/  SELECT * FROM ##compara_codigos WHERE COD LIKE '03%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC --UNIDADES DIRETAS			/**/
+/**/  --SELECT * FROM ##compara_codigos WHERE COD LIKE '04%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC --UNIDADES DIRETAS			/**/
+/**/  --SELECT * FROM ##compara_codigos WHERE COD LIKE '05%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC --UNIDADES DIRETAS			/**/
+/**/  --SELECT * FROM ##compara_codigos WHERE COD LIKE '06%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC --UNIDADES DIRETAS			/**/
+/**/  --SELECT * FROM ##compara_codigos WHERE COD LIKE '07%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC --UNIDADES DIRETAS			/**/
+/**/  SELECT * FROM ##compara_codigos WHERE COD LIKE '08%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC --UNIDADES DIRETAS			/**/
+/**/  SELECT * FROM ##compara_codigos WHERE COD LIKE '09%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC --UNIDADES DIRETAS			/**/
+																																			/**/
+/**/  SELECT * FROM ##compara_codigos WHERE COD LIKE '1%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC --OUTROS, FORA PMSP, ...			/**/
+/**/  SELECT * FROM ##compara_codigos WHERE COD LIKE '2%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC  --CCAS, CEUS, ESCOLAS TECNICAS,CIEJA	/**/
+/**/  SELECT * FROM ##compara_codigos WHERE COD LIKE '3%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC --CRECHES E ESOLAS PARTICULARES		/**/
+/**/  SELECT * FROM ##compara_codigos WHERE COD LIKE '4%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC  --CRECHES INDIRETAS			/**/
+/**/  SELECT * FROM ##compara_codigos WHERE COD LIKE '5%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC   --MOVA					/**/
+/**/  SELECT * FROM ##compara_codigos WHERE COD LIKE '6%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC  --ESP CONVENIOS 				/**/
+/**/  SELECT * FROM ##compara_codigos WHERE COD LIKE '7%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC  --CEU ATCOMPL				/**/
+/**/  SELECT * FROM ##compara_codigos WHERE COD LIKE '8%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC 						/**/
+/**/  --SELECT * FROM ##compara_codigos WHERE COD LIKE '9%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC 					/**/
+/**************************************************************************************************************************************************/ 
