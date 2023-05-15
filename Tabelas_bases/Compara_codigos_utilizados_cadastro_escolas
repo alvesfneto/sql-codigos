@@ -33,10 +33,8 @@ A.tp_unidade_administrativa,
 dc_tipo_unidade_administrativa,sg_unidade_administrativa,
 cd_unidade_administrativa,
 COD
-
 FROM D_UNIDADE_ADMINISTRATIVA A
 JOIN D_TIPO_UNIDADE_ADMINISTRATIVA B ON A.tp_unidade_administrativa=B.tp_unidade_administrativa
-
 right JOIN base_sequencia C ON A.cd_unidade_administrativa=C.COD collate SQL_Latin1_General_CP1_CI_AI
 --SELECT * FROM ##compara_codigos
 
