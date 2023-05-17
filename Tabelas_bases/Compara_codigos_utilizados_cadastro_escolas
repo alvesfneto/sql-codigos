@@ -39,7 +39,7 @@ FROM D_UNIDADE_ADMINISTRATIVA A
 JOIN D_TIPO_UNIDADE_ADMINISTRATIVA B ON A.tp_unidade_administrativa=B.tp_unidade_administrativa
 
 right JOIN base_sequencia C ON A.cd_unidade_administrativa=C.COD collate SQL_Latin1_General_CP1_CI_AI
---SELECT * FROM VW_COMPARA_CODOGOS
+--SELECT * FROM VW_COMPARA_CODOGOS WHERE CD_ESCOLA IS NOT NULL ORDER BY COD DESC
 
 /**************************************************************************************************************************************************/
 /**/  SELECT * FROM VW_COMPARA_CODOGOS WHERE COD LIKE '00%' AND CD_ESCOLA IS NOT NULL ORDER BY COD DESC --UNIDADES DIRETAS                      /**/
