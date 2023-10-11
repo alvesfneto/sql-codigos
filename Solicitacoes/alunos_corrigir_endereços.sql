@@ -1,0 +1,13 @@
+
+
+--lista de endereços de alunos que estão fora de são paulo - erros de geo localização
+
+DROP TABLE ##ALU_CORRIGIR_COORDENADAS
+SELECT * 
+INTO ##ALU_CORRIGIR_COORDENADAS
+FROM TBL_ENDERECOS_ALUNOS 
+WHERE LEFT(LAT_ALUNO,4)<>'-23.' 
+   OR LEFT(LON_ALUNO,4)<>'-46.' 
+   OR LAT_ALUNO IS NULL 
+   OR LON_ALUNO IS NULL
+--SELECT * FROM ##ALU_CORRIGIR_COORDENADAS
